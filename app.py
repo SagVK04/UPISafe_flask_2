@@ -70,12 +70,12 @@ def predict():
 
     fin_res_D_T = pred_D_T[0]
     risk_score_D_T = pred_score_D_T[0][1]
-    print("Fraud Result: ",fin_res_D_T==1)
-    print("Risk Score: ",int(risk_score_D_T*100))
+    print("Fraud_Result: ",fin_res_D_T==1)
+    print("Risk_Score: ",int(risk_score_D_T*100))
 
     return jsonify({
-        'Fraud Result': str(fin_res_D_T==1),
-        'Risk Score': str(int(risk_score_D_T*100))
+        'Fraud_Result': str(fin_res_D_T==1),
+        'Risk_Score': str(int(risk_score_D_T*100))
     })
 if __name__ == "__main__":
     app.run()
