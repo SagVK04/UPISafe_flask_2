@@ -4,6 +4,15 @@ import numpy as np
 
 model_D_T = pickle.load(open('fraud_detector_D_T.pkl','rb'))
 app = Flask(__name__)
+@app.route('/', methods=['GET'])
+def home():
+    print('Hi Welcome!')
+    print('Request_Result: Connected')
+    print('Next_Actions: Get Data from Users')
+    return jsonify({
+        'Request_Result': str("Connected"),
+        'Next_Actions': str("Get Data from Users")
+    })
 
 @app.route('/', methods=['POST'])
 def predict():
