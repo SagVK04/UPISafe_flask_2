@@ -1,5 +1,7 @@
 import pickle
 import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
 from flask import Flask, jsonify, request
 import pandas as pd
 
